@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+    h1 {
+        background: linear-gradient(#e66465, #9198e5);
+    }
+    body
+    {
+        background: linear-gradient(#e66465, #9198e5);
+    }
+
+</style>
+
+<head>
+    <title>Charles Bennington CPSC-332-01</title>
+</head>
+<body  id="pageColor">
+
+<h1 id = "h1">HW1</h1>
+<p>I hope to gain more <em>knowledge</em> about web development. In high school I dabbled
+    in react native, and I am <strong>excited</strong> to learn more about that. </p>
+<p>Here is a picture of a Emu, I took it while visiting the zoo</p>
+<img src="Emu.jpg" alt="Emu" style="width:400px;height:500px;">
+<p>I took the image myself, so heres a link to the zoo I took it from</p>
+<a href="https://www.cougarmountainzoo.org/">Link to Zoo!</a>
+<button id="sillyButton">change color fade</button>
+</body>
+
+<script>
+
+    let sillyButton = document.getElementById("sillyButton");
+    sillyButton.addEventListener("click", function() {
+        changeTextColor("red");
+    });
+
+    function changeTextColor() {
+        let heading = document.getElementById("h1");
+        let page = document.getElementById("pageColor")
+        heading.style.color = getRandomColor();
+        page.style.background = getRandomColor();
+
+    }
+
+    //one youtube tutorial later...
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+
+</script>
+</html>
